@@ -21,7 +21,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-import { NzButtonModule } from 'ng-zorro-antd/button';
+// import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
@@ -79,6 +79,9 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
+
+
+import { TodoListService } from './todo-list/todo-list.service';
 
 registerLocaleData(en);
 
@@ -165,7 +168,7 @@ registerLocaleData(en);
     NzPipesModule,
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US }, TodoListService
   ],
   bootstrap: [AppComponent]
 })
